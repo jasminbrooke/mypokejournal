@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const deletebtn = document.createElement("button")
         deletebtn.setAttribute("class", "deletebtn")
         deletebtn.innerText = "X"
+        const counter = document.createElement("button")
+        counter.setAttribute("class", "counter")
+        counter.innerText = "0"
 
         sprite.setAttribute("src", data.sprites.front_default)
         sprite.addEventListener("click", () => {
@@ -45,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.appendChild(types)
         card.appendChild(sprite)
         card.appendChild(deletebtn)
+        card.appendChild(counter)
 
         const notes = document.createElement("form")
         card.appendChild(notes)
