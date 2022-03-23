@@ -59,6 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const ul = document.createElement("ul")
         card.appendChild(ul)
 
+        notes.addEventListener("submit", (e) => {
+            e.preventDefault()
+            const li = document.createElement("li")
+            li.innerText = textField.value
+            ul.appendChild(li)
+
+        })
+
     form.addEventListener("submit", (e) => {
         e.preventDefault()
         getPokemon(userInput.value)
