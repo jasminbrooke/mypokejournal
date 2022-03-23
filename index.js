@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   "July", "August", "September", "October", "November", "December"
 ];
     const dateDisplay = document.getElementById("date")
+    const form = document.getElementById("form")
+    const userInput = document.getElementById("search")
 
     const displayDate = () => {
         const today = new Date
@@ -25,7 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const types = document.createElement("p")
         const sprite = document.createElement("img")
         name.innerText = data.name.toUpperCase()
+
+        sprite.setAttribute("src", data.sprites.front_default)
+
+        types.innerText = data.types[0].type.name
+        container.appendChild(card)
+        card.appendChild(name)
+        card.appendChild(types)
+        card.appendChild(sprite)
     }
+
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        getPokemon(userInput.value)
+        form.reset()
+    })
 
     getPokemon("pikachu")    
     displayDate()
