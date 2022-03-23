@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}/`)
         .then(res => res.json())
         .then(data => renderPokemon(data))
+        .catch(_error => alert("No Such Pokémon! \nTry one of these:\nBulbasaur, Charmander, Squirtle "))
     }
 
     const renderPokemon = (data) => {
@@ -76,6 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         deletebtn.addEventListener("click", () => {
             container.removeChild(card)
+        })
+
+        counter.addEventListener("click", () => {
+            counter.innerText = parseInt(counter.innerText) +1
         })
     }
 
