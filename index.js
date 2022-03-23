@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById("container")
         const card = document.createElement("div")
         card.setAttribute("class", "card")
+        card.setAttribute("id", data.name)
         const name = document.createElement("h3")
         const types = document.createElement("p")
         const sprite = document.createElement("img")
@@ -33,7 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
         deletebtn.innerText = "X"
         const counter = document.createElement("button")
         counter.setAttribute("class", "counter")
-        counter.innerText = "0"
+        counter.innerText = "1"
+        counter.setAttribute("title", "How many did you see?")
+
 
         sprite.setAttribute("src", data.sprites.front_default)
         sprite.addEventListener("click", () => {
@@ -88,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const bCountUpdate = () => {
         const bCount = document.querySelectorAll(".card").length
         const bottomCounter = document.getElementById("bottomCount")
-        bottomCounter.innerText = `You saw ${bCount} different Pokemon today!`
+        bottomCounter.innerText = `You saw ${bCount} species of Pokemon today!`
         }    
         bCountUpdate()
 
