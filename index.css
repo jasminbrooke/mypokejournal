@@ -86,3 +86,10 @@
     font-weight: bolder;
     margin-left: 5px;
 }
+
+
+@media screen and (max-width: 600px) {
+  .card {
+    height: auto;
+  }
+}
