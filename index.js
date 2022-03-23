@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 sprite.setAttribute("src", data.sprites.back_default)
         })
 
-        types.innerText = data.types[0].type.name
+        types.innerText = `type: ${data.types[0].type.name}`
         container.appendChild(card)
         card.appendChild(name)
         card.appendChild(types)

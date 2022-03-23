@@ -24,6 +24,7 @@
 
   
 .card {
+    background-color: aliceblue;
     text-align: center;
     border: grey solid 1px;
     padding: 1rem;
@@ -35,7 +36,7 @@
     overflow-x: hidden;
     font-family: Arial;
     scrollbar-width: thin;
-    scrollbar-color: rgb(83, 114, 218) #e04b52;
+    scrollbar-color: rgb(95, 124, 218) #e04b5293;
     position: relative;
   }
   
