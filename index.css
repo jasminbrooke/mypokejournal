@@ -53,6 +53,8 @@
   text-align: left;
   padding-left: 0;
   list-style-type: circle;
+  align-items: center;
+  display: flex;
 }
 
 .deletebtn {
@@ -74,4 +76,13 @@
 #bottomCount {
     text-align: center;
     font-family: Arial
+}
+
+.remove {
+    color: white;
+    background-color: #e04b52;
+    text-align: center;
+    font-size: 8px;
+    font-weight: bolder;
+    margin-left: 5px;
 }

@@ -64,12 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const button = document.createElement("input")
         button.setAttribute("type", "submit")
         button.setAttribute("value", "Add")
-        const removeNoteBtn = document.createElement("button")
         
         
         notes.appendChild(textField)
         notes.appendChild(button)
-        notes.appendChild(removeNoteBtn)
         const ul = document.createElement("ul")
         card.appendChild(ul)
 
@@ -79,6 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
             li.innerText = textField.value
             ul.appendChild(li)
             notes.reset()
+            const removeNoteBtn = document.createElement("button")
+            removeNoteBtn.setAttribute("class","remove")
+            removeNoteBtn.innerText = "X"
+            li.appendChild(removeNoteBtn)
         })
 
         deletebtn.addEventListener("click", () => {
