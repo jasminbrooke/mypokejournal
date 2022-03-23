@@ -10,5 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const day = today.getDate()
         dateDisplay.innerText = `${month} ${day}`
     }
+
+    const getPokemon = (pokemon) => {
+        fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}/`)
+        .then(res => res.json())
+        .then(data => renderPokemon(data))
+    }
+
+
+
+        
     displayDate()
 })
