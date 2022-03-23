@@ -29,7 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
         name.innerText = data.name.toUpperCase()
 
         sprite.setAttribute("src", data.sprites.front_default)
-
+        sprite.addEventListener("click", () => {
+            if (sprite.src === data.sprites.back_default)
+            sprite.setAttribute("src", data.sprites.front_default)
+            else 
+            sprite.setAttribute("src", data.sprites.back_default)
+        })
         types.innerText = data.types[0].type.name
         container.appendChild(card)
         card.appendChild(name)
