@@ -2,7 +2,22 @@
     text-align: center;
     font-family: Arial
   }
-  #date {
+
+#date {
     text-align: center;
     font-family: Arial;
+  }
+
+#form {
+    text-align: center;
+  }
+  
+#container {
+    display: inline-grid;
+    margin: 1rem;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
