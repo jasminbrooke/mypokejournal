@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const types = document.createElement("p")
         const sprite = document.createElement("img")
         name.innerText = data.name.toUpperCase()
+        const deletebtn = document.createElement("button")
+        deletebtn.innerText = "X"
 
         sprite.setAttribute("src", data.sprites.front_default)
         sprite.addEventListener("click", () => {
@@ -41,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.appendChild(name)
         card.appendChild(types)
         card.appendChild(sprite)
+        card.appendChild(deletebtn)
 
         const notes = document.createElement("form")
         card.appendChild(notes)
@@ -64,6 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
             li.innerText = textField.value
             ul.appendChild(li)
             notes.reset()
+        })
+
+        deletebtn.addEventListener("click", () => {
+            container.removeChild(card)
         })
     }
 
