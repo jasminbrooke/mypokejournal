@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset()
     })
 
+    
     getPokemon("pikachu")    
     displayDate()
 })
