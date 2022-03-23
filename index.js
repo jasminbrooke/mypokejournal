@@ -82,6 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
         counter.addEventListener("click", () => {
             counter.innerText = parseInt(counter.innerText) +1
         })
+        
+        const bCount = document.querySelectorAll(".card").length
+        const bottomCounter = document.getElementById("bottomCount")
+        bottomCounter.innerText = `You saw ${bCount} different Pokemon today!`
+        
     }
 
     form.addEventListener("submit", (e) => {
@@ -90,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset()
     })
 
-    
     getPokemon("pikachu")    
     displayDate()
 })

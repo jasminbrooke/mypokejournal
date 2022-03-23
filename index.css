@@ -70,3 +70,8 @@
     top: 0;
     left: 0;
 }
+
+#bottomCount {
+    text-align: center;
+    font-family: Arial
+}
