@@ -35,12 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
             else 
             sprite.setAttribute("src", data.sprites.back_default)
         })
+
         types.innerText = data.types[0].type.name
         container.appendChild(card)
         card.appendChild(name)
         card.appendChild(types)
         card.appendChild(sprite)
     }
+
+    const notes = document.createElement("form")
 
 
     form.addEventListener("submit", (e) => {
