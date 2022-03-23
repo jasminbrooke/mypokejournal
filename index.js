@@ -77,16 +77,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         deletebtn.addEventListener("click", () => {
             container.removeChild(card)
+            bCountUpdate()
+
         })
 
         counter.addEventListener("click", () => {
             counter.innerText = parseInt(counter.innerText) +1
         })
         
+        const bCountUpdate = () => {
         const bCount = document.querySelectorAll(".card").length
         const bottomCounter = document.getElementById("bottomCount")
         bottomCounter.innerText = `You saw ${bCount} different Pokemon today!`
-        
+        }    
+        bCountUpdate()
+
     }
 
     form.addEventListener("submit", (e) => {
@@ -94,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
         getPokemon(userInput.value)
         form.reset()
     })
-
     getPokemon("pikachu")    
     displayDate()
 })
