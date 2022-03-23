@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
         sprite.setAttribute("src", data.sprites.front_default)
         sprite.addEventListener("click", () => {
             if (sprite.src === data.sprites.back_default)
-            sprite.setAttribute("src", data.sprites.front_default)
+                sprite.setAttribute("src", data.sprites.front_default)
             else 
-            sprite.setAttribute("src", data.sprites.back_default)
+                sprite.setAttribute("src", data.sprites.back_default)
         })
 
         types.innerText = data.types[0].type.name
@@ -41,10 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
         card.appendChild(name)
         card.appendChild(types)
         card.appendChild(sprite)
-    }
 
-    const notes = document.createElement("form")
-    card.appendChild(notes)
+        const notes = document.createElement("form")
+        card.appendChild(notes)
         notes.setAttribute("action", "#")
         notes.setAttribute("id", "notes")
         const textField = document.createElement("input")
@@ -65,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
             li.innerText = textField.value
             ul.appendChild(li)
             notes.reset()
-
         })
+    }
 
     form.addEventListener("submit", (e) => {
         e.preventDefault()
