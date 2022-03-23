@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const li = document.createElement("li")
             li.innerText = textField.value
             ul.appendChild(li)
+            notes.reset()
 
         })
 
