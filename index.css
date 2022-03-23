@@ -57,7 +57,7 @@
   display: flex;
 }
 
-.deletebtn {
+.deleteBtn {
     color: white;
     background-color: red;
     position: absolute;

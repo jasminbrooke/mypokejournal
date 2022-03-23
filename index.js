@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const types = document.createElement("p")
         const sprite = document.createElement("img")
         name.innerText = data.name.toUpperCase()
-        const deletebtn = document.createElement("button")
-        deletebtn.setAttribute("class", "deletebtn")
-        deletebtn.innerText = "X"
+        const deleteBtn = document.createElement("button")
+        deleteBtn.setAttribute("class", "deleteBtn")
+        deleteBtn.innerText = "X"
         const counter = document.createElement("button")
         counter.setAttribute("class", "counter")
         counter.innerText = "1"
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.appendChild(name)
         card.appendChild(types)
         card.appendChild(sprite)
-        card.appendChild(deletebtn)
+        card.appendChild(deleteBtn)
         card.appendChild(counter)
 
         const notes = document.createElement("form")
@@ -77,29 +77,34 @@ document.addEventListener("DOMContentLoaded", () => {
             li.innerText = textField.value
             ul.appendChild(li)
             notes.reset()
+
             const removeNoteBtn = document.createElement("button")
             removeNoteBtn.setAttribute("class","remove")
             removeNoteBtn.innerText = "X"
             li.appendChild(removeNoteBtn)
+
+            removeNoteBtn.addEventListener("click", () => {
+                ul.removeChild(li)
+            })
         })
 
-        deletebtn.addEventListener("click", () => {
+        deleteBtn.addEventListener("click", () => {
             container.removeChild(card)
             bCountUpdate()
-
         })
 
         counter.addEventListener("click", () => {
             counter.innerText = parseInt(counter.innerText) +1
         })
         
+        
         const bCountUpdate = () => {
         const bCount = document.querySelectorAll(".card").length
         const bottomCounter = document.getElementById("bottomCount")
         bottomCounter.innerText = `You saw ${bCount} species of Pokemon today!`
-        }    
+        }
+  
         bCountUpdate()
-
     }
 
     form.addEventListener("submit", (e) => {
@@ -107,6 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
         getPokemon(userInput.value)
         form.reset()
     })
-    getPokemon("pikachu")    
+
+    getPokemon("pikachu")
     displayDate()
+    // deleteBtn()
 })
