@@ -61,3 +61,11 @@
     top: 0;
     right: 0;
 }
+
+.counter {
+    color: white;
+    background-color:green;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
