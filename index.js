@@ -44,7 +44,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const notes = document.createElement("form")
+    card.appendChild(notes)
+        notes.setAttribute("action", "#")
+        notes.setAttribute("id", "notes")
+        const textField = document.createElement("input")
+        textField.setAttribute("type", "text")
+        textField.setAttribute("placeholder", "Add field notes...")
+        const button = document.createElement("input")
+        button.setAttribute("type", "submit")
+        button.setAttribute("value", "Add")
 
+        notes.appendChild(textField)
+        notes.appendChild(button)
+        const ul = document.createElement("ul")
+        card.appendChild(ul)
 
     form.addEventListener("submit", (e) => {
         e.preventDefault()
