@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const sprite = document.createElement("img")
         name.innerText = data.name.toUpperCase()
         const deletebtn = document.createElement("button")
+        deletebtn.setAttribute("class", "deletebtn")
         deletebtn.innerText = "X"
 
         sprite.setAttribute("src", data.sprites.front_default)
